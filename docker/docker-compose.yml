@@ -134,3 +134,9 @@ services:
         volumes:
             - ~/.flowise:/root/.flowise
         entrypoint: /bin/sh -c "sleep 3; flowise start"
+        networks:
+          - dokploy-networ
+
+networks:
+  dokploy-network:
+    external: true
